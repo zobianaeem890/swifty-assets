@@ -220,4 +220,4 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 10px)}
       font-size:.92rem;text-decoration:none;margin-bottom:24px}
 
 .frame{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin:24px 0 10px;background:var(--surface)}
-.frame iframe{width:100%;height:1200px;border:0;display:block}
+.frame iframe{width:100%;height:760px;border:0;display:block}
