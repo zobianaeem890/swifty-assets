@@ -52,7 +52,7 @@
         <a href="./opt-in.html">SMS opt-in details</a>.</p>
     </div>
 
-    <div class="frame">
+    <div class="frame" id="bookFrameWrap">
       <iframe id="bookFrame" title="Swifty House Cleaning booking form"
         src="https://script.google.com/macros/s/AKfycbzqrxPmzsFwn7c91DV2QQRD4fdnMlbEUDbpg3ehrnO_8T-sRW3ERwbFbPHDrUto1-A1hQ/exec?page=book"></iframe>
     </div>
@@ -95,10 +95,15 @@
 </footer>
 
 <script>
+  /* The form reports its own height, so the frame is never taller than the
+     questionnaire and the form never sits in a pool of empty space. */
   window.addEventListener('message', function (e) {
     var h = e && e.data && e.data.swiftyHeight;
+    if (!h || h < 300) return;
     var f = document.getElementById('bookFrame');
-    if (f && h && h > 300) f.style.height = (h + 20) + 'px';
+    var w = document.getElementById('bookFrameWrap');
+    if (f) f.style.height = h + 'px';
+    if (w) w.style.minHeight = (h + 20) + 'px';
   });
 </script>
 
