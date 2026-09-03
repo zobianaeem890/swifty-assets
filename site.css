@@ -226,3 +226,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 10px)}
               transition:height .25s ease}
 @media(max-width:640px){.frame{padding:0;border:0;background:transparent;min-height:0}
                         .frame iframe{height:660px}}
+
+.frame__note{font-size:.9rem;color:var(--slate);line-height:1.6;background:var(--surface);
+             border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;margin:4px 0 0}
+.frame__note a{color:var(--blue);font-weight:700;white-space:nowrap}
